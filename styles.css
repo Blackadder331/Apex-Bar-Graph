@@ -154,3 +154,20 @@ body.dark-mode {
     box-shadow:  10px 10px 20px #171717,
                  -10px -10px 20px #060606 !important;
 }
+
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    padding-top: 33vh;
+    }
+
+    #dark-mode-btn {
+        margin-bottom: -14rem;
+        scale: 1.25;
+    }
+
+    .container {
+        scale: .3;
+    }
+}
