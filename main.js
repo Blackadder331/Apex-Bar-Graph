@@ -20,7 +20,7 @@ const defaultOptions = {
         selection: {enabled: false, },
         zoom: {enabled: false, },
         width: "100%",
-        height: 300,
+        height: 250,
         offsetY: 8,
     },
     stroke: { lineCap: "round", },
