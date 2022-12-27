@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+@font-face {
+    font-family: "Uncut-Sans-Bold";
+    src: url(./fonts/Uncut-Sans-Bold.otf);
+}
 
 * { 
     box-sizing: border-box; 
-    font-family: 'Poppins', sans-serif;
+    font-family: '"Uncut-Sans-Bold"', sans-serif;
 }
 
 html, body { 
@@ -15,19 +18,23 @@ html, body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 6rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-top: 2rem;
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-top: 5rem;
 }
 
 h1, h2, h3, h4, h5 {
     line-height: 1.1;
+    margin: 0;
+    padding: 0;
 }
 
 body,
@@ -35,15 +42,11 @@ input,
 button,
 select,
 textarea {
-    font: 600 1rem 'Poppins'; 
+    font: 600 1rem "Uncut-Sans-Bold"; 
     color: #222};
-a { text-decoration: none; }
-a:link { color: #6A26CD; }
-a:hover { color: #431488; }
-a:active { color: #6A26CD; }
-a:visited { color: #6A26CD; }
 
-html, body, #root { height: 100%; display: flex;}
+
+body, #root { height: 100%;}
 
 ul, ol { margin: 0 0 1rem; padding: 0 0 0 1rem; }
 
@@ -56,15 +59,98 @@ table:not(th){
 }
 
 /* Custom CSS */
+.wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
 
 .container  {
 border-radius: 50px;
 background: #e0e0e0;
 box-shadow:  34px 34px 80px #a8a8a8,
              -34px -34px 80px #ffffff;
-padding: 20rem;
-margin: 10rem;
-flex: auto;
-align-items: center;
+padding: 11rem;
+margin: 0rem;
+display: flex;
+flex-direction: column;
+align-items: left;
 justify-content: center;
+/* max-height: 50rem; */
+max-width: 70rem;
+}
+
+:root {
+    --color-text: #1a1a1a;
+    --color-primary: #12d6cc;
+    --color-label: #a7a7a7;
+    --color-default: #3b3b3b;
+    --font-family: "Uncut-Sans-Bold";
+}
+
+body .apexcharts-tooltip.apexcharts-theme-light {
+    color: var(--color-text);
+    background: #ffffff;
+    box-shadow: none;
+    border: 1px solid #e7e7e7;
+    padding: 8px;
+    /* opacity: 1 !important for debugging */
+}
+
+body .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+    display: none;
+}
+
+body .apexcharts-tooltip.apexcharts-xaxistooltip-bottom.apexcharts-theme-light {
+    display: none;
+}
+
+
+
+#bar-chart {
+    margin-top: 3rem;
+    max-width: 40rem;
+    min-width: 38rem;
+    scale: 100%;
+    display: flex;
+    align-content: left;
+    flex-direction: column;
+    justify-items: left;
+}
+
+#dark-mode-btn {
+    scale: 3;
+    display: flex;
+    flex-direction: row;
+    border-radius: 70px;
+    border-radius: 70px;
+    padding: 1rem 1.25rem ;
+    margin-bottom: 10rem;
+    background: #e0e0e0;
+    box-shadow:  14px 14px 20px #a8a8a8,
+                 -14px -14px 20px #ffffff;
+
+    cursor: crosshair;
+}
+
+
+body.dark-mode {
+    background-color: #222222;
+    color: white;
+  }
+  
+.container.dark-mode {
+    background-color: #222222;
+    color: white;
+    box-shadow:  34px 34px 80px #171717,
+    -34px -34px 80px #060606 !important;
+}
+
+.dark-mode-btn.dark-mode {
+    background-color: #222222 !important;
+    background: #222222 !important;
+    box-shadow:  10px 10px 20px #171717,
+                 -10px -10px 20px #060606 !important;
 }
